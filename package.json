@@ -1,5 +1,5 @@
 {
-    "name": "finance",
+    "name": "Imaginary Backend",
     "version": "1.0.0",
     "main": "src/app.js",
     "author": "Aristide Muhizi",
@@ -33,10 +33,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/rfda-repo/finance.git"
+        "url": "git+https://github.com/muhizia/imaginary_backend.git"
     },
     "bugs": {
-        "url": "https://github.com/rfda-repo/finance/issues"
+        "url": "https://github.com/muhizia/imaginary_backend/issues"
     },
-    "homepage": "https://github.com/rfda-repo/finance#readme"
+    "homepage": "https://github.com/muhizia/imaginary_backend#readme"
 }
