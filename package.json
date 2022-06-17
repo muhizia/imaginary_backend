@@ -1,11 +1,42 @@
 {
-  "name": "kgl_software",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "npm start"
-  },
-  "author": "Aristide Muhizi",
-  "license": "ISC"
+    "name": "finance",
+    "version": "1.0.0",
+    "main": "src/app.js",
+    "author": "Aristide Muhizi",
+    "license": "MIT",
+    "dependencies": {
+        "@koa/cors": "^3.1.0",
+        "@sentry/node": "^6.13.3",
+        "@sentry/tracing": "^6.13.3",
+        "bcrypt": "^5.0.1",
+        "dotenv": "^10.0.0",
+        "knex": "^0.95.12",
+        "koa": "^2.13.4",
+        "koa-body": "^4.2.0",
+        "koa-bodyparser": "^4.3.0",
+        "koa-ejs": "^4.3.0",
+        "koa-mount": "^4.0.0",
+        "koa-reqlog": "^1.0.6",
+        "koa-router": "^10.1.1",
+        "koa-session": "^6.2.0",
+        "koa-static": "^5.0.0",
+        "mime-types": "^2.1.34",
+        "mysql": "^2.18.1",
+        "nodemon": "^2.0.14",
+        "path": "^0.12.7",
+        "pg": "^8.7.1"
+    },
+    "description": "",
+    "devDependencies": {},
+    "scripts": {
+        "start": "nodemon src/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rfda-repo/finance.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rfda-repo/finance/issues"
+    },
+    "homepage": "https://github.com/rfda-repo/finance#readme"
 }
