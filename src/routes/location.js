@@ -11,17 +11,10 @@ require('dotenv').config()
 const koaRouter = require('koa-router');
 const router = new koaRouter();
 const locationService = require('../services/location')
-const { validateEmail } = require('../util/validate');
-
-router.get('/', async ctx => {
-    ctx.status = 201;
-    ctx.body = { "status": "failed", "msg": "Enter a correct email" };
-});
 
 router.post('/add', async ctx => {
     const { lat, long } = ctx.request.body;
-    var error = false;
-    console.log('---->', lat, ' ', long)
+    
     if (!lat) {
         ctx.throw(400, 'Provide a valid latitude');
     }
@@ -57,6 +50,7 @@ router.put('/edit', async ctx => {
     
     
     const location = await locationService.updateLocation(id, long, lat);
+    
     if (location[0]) {
         ctx.status = 201;
         ctx.body = { "status": "success", "msg": "You have successfuly updated a location" };
