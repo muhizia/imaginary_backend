@@ -8,16 +8,18 @@
  * @class IndexService
  *
  */
-const indexDAO = require('../dao/location');
-const indexController = require('../controller/location');
+const locationDAO = require('../dao/location');
+const locationController = require('../controller/location');
  
 class IndexService {
 
-    addLocation(long, lat) {
-        return indexController.addLocation(long, lat);
+    async addLocation(long, lat) {
+        const average_location = locationController.get_average_location(long, lat);
+        return await locationDAO.addLocation(long, lat, average_location);
     }
-    updateLocation(id, long, lat) {
-        return indexController.updateLocation(id, long, lat);
+    async updateLocation(id, long, lat) {
+        const average_location = locationController.get_average_location(long, lat);
+        return await locationDAO.updateLocation(id, long, lat, average_location);
     }
 }
 
